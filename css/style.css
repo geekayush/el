@@ -1,0 +1,122 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+.heroSectionContainer{
+	width: 100vw;
+	height: 100vh;
+}
+.heroSectionBackground{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../assets/background.jpeg);
+	background-size: cover;
+	background-position: bottom;
+}
+.heroSectionOverlay{
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+}
+.heroContent{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.heroItems{
+	text-align: center;
+	color: rgba(255,255,255,1);
+}
+.logo{
+	width: 250px;
+	height: auto;
+}
+h1{
+	text-transform: uppercase;
+	font-size: 100px;
+	font-family: 'Aleo';
+	font-weight: 700;
+}
+h2{
+	font-size: 50px;
+	font-family: 'Satisfy';
+}
+h3{
+	font-size: 32px;
+	font-family: 'Open Sans';
+	font-weight: 200;
+	text-transform: uppercase;
+	margin-top: 72px;
+	letter-spacing: 3px;
+}
+@keyframes load{
+	0%,100%{
+		margin-bottom: 0;
+	}
+	50%{
+		margin-bottom: 6px;
+	}
+}
+.load:after {
+  content: '.';
+  -webkit-animation: dots 1s steps(5, end) infinite;
+          animation: dots 1s steps(5, end) infinite;
+}
+
+@-webkit-keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: white;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 white;}}
+
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: white;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 white;}}
+#loading{
+	height: 100vh;
+	width: 100vw;
+	background-color: #ddd;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+#loading-image{
+	width: 150px;
+	height: 150px;
+}
