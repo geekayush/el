@@ -97,4 +97,17 @@ $(document).ready(function () {
     $(".nav-toggle").toggleClass("close-nav");
     nav.toggleClass("open");
   });
+
+  // Drop a message
+  $("#submit").on("click", function () {
+    let message = $("textarea#message").val();
+    if (message) {
+      window.open("https://wa.me/+918005356490?text=" + message, "_blank");
+    } else {
+      $("#alert").removeClass("hide").addClass("show");
+      setTimeout(function () {
+        $("#alert").removeClass("show").addClass("hide");
+      }, 3000);
+    }
+  });
 });

@@ -95,6 +95,9 @@
  .flex-control-nav {
  width: 100%;
 }
+.address{
+    text-align: center;
+}
  .footer .footer-col {
  margin-bottom: 50px;
 }

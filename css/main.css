@@ -58,7 +58,7 @@ address {
 }
 .btn:hover,
 .btn:focus {
-  background-color: #ff5518;
+  background-color: #1a8394;
   color: #fff;
 }
 .btn-large {
@@ -149,7 +149,7 @@ ul li {
 
 #header.fixed .header-content .logo a {
   padding-top: 10%;
-  color: #ff5518;
+  color: #1a8394;
   text-align: center;
 }
 #header.fixed {
@@ -190,7 +190,7 @@ ul li {
   padding: 28px 10px;
 }
 .navigation a:hover {
-  color: #ff5518 !important;
+  color: #1a8394 !important;
 }
 .nav-toggle {
   display: none;
@@ -507,14 +507,14 @@ Common Styles
   position: absolute;
   width: 10px;
   height: 100%;
-  background: #ff5518;
+  background: #1a8394;
   /* border-radius: 50%; */
   left: 0;
   z-index: 0;
   top: 0%;
 }
 .services .section-header h2 {
-  color: #ff5518;
+  color: #1a8394;
   font-weight: bold;
 }
 .services .section-header p {
@@ -533,7 +533,7 @@ Common Styles
   padding: 0;
   margin: 0;
   font-size: 12px;
-  color: #ff5518;
+  color: #1a8394;
   display: inline-block;
   width: 100%;
 }
@@ -542,7 +542,7 @@ Common Styles
   margin-top: 10px;
 }
 .services .icon {
-  color: #ff5518;
+  color: #1a8394;
   font-size: 50px;
   padding-top: 26px;
   display: inline-block;
@@ -559,6 +559,11 @@ Common Styles
 /* ------------------------------------------------------------------------------
 	 gallery
 -------------------------------------------------------------------------------*/
+.gallery-row{
+  display: flex;
+  align-items: stretch;
+}
+
 .work {
   -moz-box-shadow: 0 0 0 1px #fff;
   /* -webkit-box-shadow: 0 0 0 1px #fff; */
@@ -645,7 +650,7 @@ Common Styles
 -------------------------------------------------------------------------------*/
 .packageList {
   padding: 100px 0;
-  background: #ff5518;
+  background: #1a8394;
 }
 h5 {
   font-size: 1.286em;
@@ -676,7 +681,7 @@ ul.list-default li {
   /* background: #010101; */
 }
 .package:hover {
-  background-color: #ff5518;
+  background-color: #1a8394;
 }
 .package:hover h5 {
   /* color: #da1b2d; */
@@ -718,6 +723,7 @@ ul.list-default li {
 /* ------------------------------------------------------------------------------
 	 Teams
 -------------------------------------------------------------------------------*/
+
 .person {
   max-width: 270px;
   text-align: center;
@@ -725,6 +731,10 @@ ul.list-default li {
 .person img {
   width: 150px;
   height: 150px;
+  object-fit: cover;
+  object-position: top;
+  -o-object-fit: cover;
+  -o-object-position: top;
   margin: auto;
   border-radius: 5%;
   border: 2px solid #2d2d2d;
@@ -753,8 +763,8 @@ ul.list-default li {
 }
 .social-icons a,
 .footer .footer-share a {
-  border: 1px solid #ff5518;
-  color: #ff5518;
+  border: 1px solid #1a8394;
+  color: #1a8394;
   display: block;
   font-size: 14px;
   height: 32px;
@@ -764,15 +774,15 @@ ul.list-default li {
   width: 32px;
 }
 .social-icons a:hover {
-  background-color: #ff5518;
-  border-color: #ff5518;
+  background-color: #1a8394;
+  border-color: #1a8394;
   color: #fff;
 }
 /* ------------------------------------------------------------------------------
 	 Testimonials
 -------------------------------------------------------------------------------*/
 .testimonials {
-  background-color: #ff5518;
+  background-color: #1a8394;
   position: relative;
   text-align: center;
 }
@@ -784,8 +794,8 @@ ul.list-default li {
 .testimonials h1 {
   color: rgba(255, 255, 255, 0.87);
   font-weight: 300;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 1.5;
 }
 .testimonials p {
   color: #fff;
@@ -808,11 +818,15 @@ ul.list-default li {
 }
 
 .events {
-  background-color: #ff5518;
+  background-color: #1a8394;
+}
+
+.white {
+  color: #ffffff;
 }
 
 #tours {
-  background: #ff5518;
+  background: #1a8394;
   padding: 80px 0px 0;
   display: table;
   margin: 0 auto;
@@ -883,7 +897,7 @@ ul.list-default li {
   color: #fff;
 }
 
-.tour-info a {
+.tour-info span {
   color: #fff;
   font-size: 14px;
   background: #000;
@@ -917,7 +931,6 @@ ul.list-default li {
 }
 .conForm p {
   text-align: center;
-  margin: 7%;
 }
 .conForm input {
   color: #797979;
@@ -948,7 +961,7 @@ ul.list-default li {
   background: #010101;
 }
 .conForm .submitBnt {
-  background: #ff5518;
+  background: #1a8394;
   color: #fff;
   margin-top: 20px;
   padding: 15px 30px 15px 30px;
@@ -961,7 +974,6 @@ ul.list-default li {
   border-radius: 2px;
   display: inline-block;
   text-transform: uppercase;
-  float: right;
   margin-right: 0px;
 }
 .conForm .submitBnt:hover {
@@ -972,11 +984,21 @@ ul.list-default li {
   color: #00bdbd;
   font-weight: 500;
 }
-.error_message {
+.error-message {
   color: #ff675f;
-  padding-bottom: 15px;
   font-weight: 500;
+  position: absolute;
+  top: 155px;
 }
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 #success_page h3 {
   font-size: 17px;
   color: #5ed07b;
