@@ -559,7 +559,7 @@ Common Styles
 /* ------------------------------------------------------------------------------
 	 gallery
 -------------------------------------------------------------------------------*/
-.gallery-row{
+.gallery-row {
   display: flex;
   align-items: stretch;
 }
@@ -682,11 +682,6 @@ ul.list-default li {
 }
 .package:hover {
   background-color: #1a8394;
-}
-.package:hover h5 {
-  /* color: #da1b2d; */
-}
-.package:hover .price {
 }
 .package ul.list-default li {
   border: none !important;
