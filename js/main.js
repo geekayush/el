@@ -110,4 +110,51 @@ $(document).ready(function () {
       }, 3000);
     }
   });
+
+  const blogList = $(".blogs");
+  if (blogList.length) {
+    $.getJSON("./data/blogs.json", function ({ data }) {
+      data.forEach((blog, index) => {
+        const { title, highlight } = blog;
+        const block = `
+        <a href="/blog#${index}">
+          <div class="col-sm-12 col-md-10 col-md-offset-1 services service-box blog-card">
+            <div class="services-content text-left">
+              <h5>${title}</h5>
+              ${highlight}
+            </div>
+          </div>
+        </a>`;
+        $("#blog-list").append(block);
+      });
+    }).fail(function () {
+      console.log("An error has occurred.");
+    });
+  }
+
+  const blog = $("#blog");
+  if (blog.length) {
+    $.getJSON("./data/blogs.json", function ({ data }) {
+      const index = window.location.hash.substr(1);
+      const { background, title, text } = data[index];
+      const block = `
+      <div class="container-fluid">
+        <div class="blog-background" style="background-image: url(${background})"></div>
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+              <h2 class="blog-title">${title}</h2>
+            </div>
+          </div>  
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+              ${text}
+            </div>
+          </div>
+        </div>
+      </div>`;
+      $("#blog").append(block);
+    }).fail(function () {
+      console.log("An error has occurred.");
+    });
+  }
 });
