@@ -115,10 +115,11 @@ $(document).ready(function () {
   if (blogList.length) {
     $.getJSON("./data/blogs.json", function ({ data }) {
       data.forEach((blog, index) => {
-        const { title, highlight } = blog;
+        const { title, highlight, background } = blog;
         const block = `
         <a href="/blog#${index}">
           <div class="col-sm-12 col-md-10 col-md-offset-1 services service-box blog-card">
+            <div class="custom-thumbnail" style="background-image: url(${background})"></div>
             <div class="services-content text-left">
               <h5>${title}</h5>
               ${highlight}

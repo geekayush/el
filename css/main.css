@@ -1198,3 +1198,11 @@ div#map-row {
   margin: 64px 0 32px 0;
   color: #fff;
 }
+
+.custom-thumbnail {
+  height: 200px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
