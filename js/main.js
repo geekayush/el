@@ -114,10 +114,10 @@ $(document).ready(function () {
   const blogList = $(".blogs");
   if (blogList.length) {
     $.getJSON("./data/blogs.json", function ({ data }) {
-      data.forEach((blog, index) => {
-        const { title, highlight, background } = blog;
+      data.forEach((blog) => {
+        const { title, highlight, background, id } = blog;
         const block = `
-        <a href="/blog#${index}">
+        <a href="/blog#${id}">
           <div class="col-sm-12 col-md-10 col-md-offset-1 services service-box blog-card">
             <div class="custom-thumbnail" style="background-image: url(${background})"></div>
             <div class="services-content text-left">
@@ -137,7 +137,9 @@ $(document).ready(function () {
   if (blog.length) {
     $.getJSON("./data/blogs.json", function ({ data }) {
       const index = window.location.hash.substr(1);
-      const { background, title, text } = data[index];
+      const { background, title, text } = data.filter(
+        (blog) => blog.id === Number(index)
+      )[0];
       const block = `
       <div class="container-fluid">
         <div class="blog-background" style="background-image: url(${background})"></div>
