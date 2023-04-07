@@ -729,6 +729,7 @@ ul.list-default li {
 .person {
   max-width: 270px;
   text-align: center;
+  margin: auto;
 }
 .person img {
   width: 150px;
